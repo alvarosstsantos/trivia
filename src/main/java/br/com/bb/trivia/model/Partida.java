@@ -1,5 +1,6 @@
 package br.com.bb.trivia.model;
 
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -33,4 +35,7 @@ public class Partida {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="jogador_id", referencedColumnName = "id")
     private Jogador jogador;
+
+    @OneToMany(mappedBy = "partida")
+    private Set<Resposta> resposta;
 }

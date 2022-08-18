@@ -1,5 +1,6 @@
 package br.com.bb.trivia.model;
 
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,7 +31,7 @@ public class Resposta {
     private Pergunta pergunta;
 
     @NotNull
-    @OneToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="partida_id", referencedColumnName = "id")
     private Partida partida;
 
