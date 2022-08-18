@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Configuration;
         public OpenAPI springShopOpenAPI() {
             return new OpenAPI()
                     .info(new Info()
-                            .title("Jogo de Milhao")
-                            .description("Vai ficar faltando a musiquinha e os universitários!")
+                            .title("Jogo do Milhão")
+                            .description("Você quer ganhar um MILHÃO de reais?")
                             .version("v0.0.1")
                     );
         }

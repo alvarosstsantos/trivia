@@ -14,7 +14,6 @@ import java.util.Set;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @Entity
 public class Jogador {
     @Id
@@ -32,7 +31,7 @@ public class Jogador {
     @JsonIgnoreProperties(allowGetters = true)
     private String senha;
 
-    @OneToMany(mappedBy = "jogador")
+    @OneToMany(mappedBy = "jogador", cascade = CascadeType.ALL)
     private Set<Partida> partida;
 
 }

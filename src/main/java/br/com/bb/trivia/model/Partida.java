@@ -32,10 +32,10 @@ public class Partida {
     @ColumnDefault("0")
     private Integer pontuacao;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name="jogador_id", referencedColumnName = "id")
     private Jogador jogador;
 
-    @OneToMany(mappedBy = "partida")
+    @OneToMany(mappedBy = "partida", cascade = CascadeType.ALL)
     private Set<Resposta> resposta;
 }

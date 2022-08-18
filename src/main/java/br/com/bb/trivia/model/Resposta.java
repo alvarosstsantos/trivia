@@ -31,7 +31,7 @@ public class Resposta {
     private Pergunta pergunta;
 
     @NotNull
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name="partida_id", referencedColumnName = "id")
     private Partida partida;
 

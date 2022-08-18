@@ -26,7 +26,7 @@ public class Alternativa {
     @NotNull(message = "ehCorreta nao pode ser null")
     private Boolean ehCorreta;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name="pergunta_id", referencedColumnName = "id")
     private Pergunta pergunta;
 }

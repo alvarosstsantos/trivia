@@ -12,7 +12,6 @@ import java.util.Set;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @Entity
 public class Pergunta {
 
@@ -24,6 +23,6 @@ public class Pergunta {
     @NotEmpty(message = "texto nao pode ser vazio")
     private String texto;
 
-    @OneToMany(mappedBy = "pergunta")
+    @OneToMany(mappedBy = "pergunta", cascade = CascadeType.ALL)
     private Set<Alternativa> alternativa;
 }

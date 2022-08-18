@@ -1,7 +1,6 @@
 package br.com.bb.trivia.repository;
 
 import br.com.bb.trivia.model.Partida;
-import br.com.bb.trivia.model.Pergunta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
